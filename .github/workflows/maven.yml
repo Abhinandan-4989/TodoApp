@@ -34,5 +34,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+       name: todoapp-jar
+       path: target/*.jar
 
 
